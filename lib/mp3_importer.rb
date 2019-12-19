@@ -14,7 +14,7 @@ class MP3Importer
   end
   
   def files
-    binding.pry
+    Dir.entries(@filepath)
   end
     
   # def files(file)
