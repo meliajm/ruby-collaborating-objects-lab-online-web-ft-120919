@@ -12,10 +12,14 @@ class MP3Importer
   def path
     @filepath
   end
+  
+  def files
     
-  def files()
-    @@paths << file
   end
+    
+  # def files(file)
+  #   @@paths << file
+  # end
   
   def import 
     
