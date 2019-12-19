@@ -14,7 +14,7 @@ class MP3Importer
   end
   
   def files
-    Dir.entries(@filepath)
+    Dir.entries(@filepath).select { |f| }
   end
     
   # def files(file)
