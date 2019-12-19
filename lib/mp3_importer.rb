@@ -2,6 +2,7 @@ require 'pry'
 
 class MP3Importer
   
+  # attr_reader :filepath
   @@paths = []
   
   def initialize(filepath)

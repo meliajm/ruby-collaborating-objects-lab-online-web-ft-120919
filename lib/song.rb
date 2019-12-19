@@ -23,28 +23,10 @@ class Song
   
   
   def artist_name=(name)
+    self.artist = Artist.find_or_create_by_name(name)
+    artist.add_song(self)
     # binding.pry
-    # if self.artist != name
-    #   self.artist = Artist.new(name)
-    # end
-    # if (self.artist.nil?)
-    #   self.artist = Artist.new(name)
-    # else
-    #   self.artist.name = name
-    # end
-    
-    if self.artist.nil?
-      self.artist = Artist.new(name)
-    else
-      self.artist.name = name
-    end
-    
-    
   end
-  
-  
-    
-    # binding.pry
-    
-  
+
+
 end 
