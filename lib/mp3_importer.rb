@@ -2,6 +2,7 @@ require 'pry'
 
 class MP3Importer
   
+  # attr_reader :filepath
   @@paths = []
   
   def initialize(filepath)
@@ -11,12 +12,16 @@ class MP3Importer
   def path
     @filepath
   end
+  
+  def files
+    Dir.entries(@filepath).select { |f| f.end_with?(".mp3") == true }
+  end
     
-  def files(file)
-    @@paths << file
+  def import 
+    # binding.pry
+    self.files.each do |filename|
+      Song.new_by_filename(filename)
+    end
   end
   
-  def import 
-    
-  end
 end 
