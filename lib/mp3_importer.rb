@@ -13,7 +13,7 @@ class MP3Importer
     @filepath
   end
     
-  def files(file)
+  def files()
     @@paths << file
   end
   
