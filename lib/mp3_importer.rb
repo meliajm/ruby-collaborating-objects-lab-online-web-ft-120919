@@ -17,11 +17,8 @@ class MP3Importer
     Dir.entries(@filepath).select { |f| f.end_with?(".mp3") == true }
   end
     
-  # def files(file)
-  #   @@paths << file
-  # end
-  
   def import 
-    
+    binding.pry
   end
+  
 end 
